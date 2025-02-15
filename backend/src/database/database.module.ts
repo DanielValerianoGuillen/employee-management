@@ -17,7 +17,7 @@ import { DocumentType } from '../entities/document-type.entity';
       entities: [User, Employee, EmployeeDocument, DocumentType], 
       synchronize: false,         
       migrations: ['src/migrations/*.ts'], 
-      migrationsRun: true,
+      migrationsRun: false,
     }),
   ],
 })
