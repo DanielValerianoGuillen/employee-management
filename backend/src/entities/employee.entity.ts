@@ -24,9 +24,12 @@ export class Employee {
   document: string;
 
   @OneToOne(() => User, (user) => user.employee, { onDelete: 'CASCADE' })
-  @JoinColumn()
+  @JoinColumn({ name: 'userId' })
   user: User;
 
+  @Column() // Asegúrate de que userId esté definido como una columna
+  userId: number;
+  
   @OneToMany(
     () => EmployeeDocument,
     (employeeDocument) => employeeDocument.employee,

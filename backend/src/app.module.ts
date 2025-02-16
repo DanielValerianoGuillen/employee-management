@@ -1,13 +1,15 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
-import { SeederModule } from './database/seeder.module';
 import { AuthModule } from './auth/auth.module';
+import { SeederModule } from './database/seeder.module';
+import { EmployeesModule } from './employees/employees.module';
 
 @Module({
-  imports: [DatabaseModule,SeederModule, AuthModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    DatabaseModule,
+    SeederModule,
+    AuthModule,
+    EmployeesModule, // Asegúrate de que ProfileModule esté registrado
+  ]
 })
 export class AppModule {}
