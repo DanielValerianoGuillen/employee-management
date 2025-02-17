@@ -12,10 +12,10 @@ import {
   import { EmployeesService } from './employees.service';
   import { CreateEmployeeDto } from './dto/create-employee.dto';
   import { UpdateEmployeeDto } from './dto/update-employee.dto';
-  import { JwtAuthGuard } from '../auth/jwt-auth.guard'; // Importa el guard
+  import { JwtAuthGuard } from '../auth/jwt-auth.guard'; 
   
   @Controller('employees')
-  @UseGuards(JwtAuthGuard) // Protege la ruta con JWT
+  @UseGuards(JwtAuthGuard) // 
   export class EmployeesController {
     constructor(private readonly employeesService: EmployeesService) {}
   

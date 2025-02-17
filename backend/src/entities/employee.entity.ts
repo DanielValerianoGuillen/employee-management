@@ -27,7 +27,7 @@ export class Employee {
   @JoinColumn({ name: 'userId' })
   user: User;
 
-  @Column() // Asegúrate de que userId esté definido como una columna
+  @Column() // 
   userId: number;
   
   @OneToMany(

@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToOne } from 'typeorm';
+import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Employee } from './employee.entity';
 
 @Entity('t_users')
@@ -20,4 +20,6 @@ export class User {
 
   @OneToOne(() => Employee, (employee) => employee.user, { cascade: true })
   employee: Employee;
+
+  
 }
